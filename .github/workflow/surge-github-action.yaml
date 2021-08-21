@@ -18,4 +18,7 @@ jobs:
       run: "echo Insert your test here later"
 
     - name: Deploy to surge.sh
-      run: surge .build https://exploregithubaction.surge.sh/ --token ${{Secrets.TOKEN_SURGE}}
+      run: surge ./src/public https://exploregithubaction.surge.sh/ --token ${{Secrets.TOKEN_SURGE}}
+
+    - name: End workflow
+      run: "echo End workflow"
