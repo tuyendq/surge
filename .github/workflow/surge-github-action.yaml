@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ dev ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Surge
+      run: npm install -g surge
+
+    - name: Test
+      run: "echo Insert your test here later"
+
+    - name: Deploy to surge.sh
+      run: surge .build https://exploregithubaction.surge.sh/ --token ${{secrets.TOKEN}}

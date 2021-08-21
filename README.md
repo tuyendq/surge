@@ -1,2 +1,3 @@
-# surge
+# surge.sh
+
 Explore surge.sh
